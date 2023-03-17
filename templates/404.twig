@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content">
+				<div class="container pt-5">
+					<div class="row">
+						<div class="col-12 col-md-12 my-5 pt-5 h1">
+							<h1>Ops
+								<br>Questa pagina non esiste!</h1>
+						</div>
+						<div class="col-12 col-md-12 py-2 my-2">
+							<a href="{{ home }}" class="a5t-btn my-5 text-uppercase link-fx-out">TORNA ALLA HOME</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+	</div>
+	<!-- /content-wrapper -->
+{% endblock %}

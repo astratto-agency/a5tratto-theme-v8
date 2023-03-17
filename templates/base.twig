@@ -1,0 +1,72 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+	{# :::::::::::::: 11 * A_SETTINGS loader #}
+    <div id="loader-wrapper">
+        <div id="loader">
+            {# :::::::::::::: 11 * A_SETTINGS a5t-spinners-balls https://codepen.io/a5tratto/full/OJjLyBZ #}
+            <div class="a5t-loader-spinners-balls">
+                <div class="a5t-spinners-balls-1"></div>
+                <div class="a5t-spinners-balls-2"></div>
+            </div>
+            {# :::::::::::::: end * A_SETTINGS a5t-spinners-balls #}
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <img class="logo-loader"
+             src="{% if custom_logo_url %}{{ custom_logo_url[0] }}{% else %}{{ stylesheet_directory_uri }}/img/icona-a5tratto-w.png{% endif %}"
+             height="80">
+    </div>
+    {# :::::::::::::: 11 * A_SETTINGS loader #}
+		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+		
+		
+		{# <header class="header" >
+			{% block header %}
+				<div class="wrapper">
+					<h1 class="hdr-logo" role="banner">
+						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+					</h1>
+					<nav id="nav-main" class="nav-main" role="navigation">
+						{% include "menu.twig" with {'items': menu.get_items} %}
+					</nav><!-- #nav -->
+				</div>
+			{% endblock %}
+		</header> #}
+
+		{# ::::::::::::::  * A_SETTINGS header #}
+    	<header>
+    	    {% block header %}
+    	        {% include "headers/header-2/header-2.twig" %}
+    	    {% endblock %}
+    	</header>
+    	{# :::::::::::::: end * A_SETTINGS header #}
+
+		<section id="content" role="main" class="content-wrapper">
+			<div class="wrapper {{sidebar_class}}">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			</div>
+			{% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+			{% endif %}
+		</section>
+        {# ::::::::::::::  * A_SETTINGS footer #}
+        {% block footer %}
+            <footer id="footer" class="bg-black-20">
+                {% include 'footer.twig' %}
+            </footer>
+			{{ function('wp_footer') }}
+        {% endblock %}
+        {# :::::::::::::: end * A_SETTINGS footer #}
+	</body>
+</html>

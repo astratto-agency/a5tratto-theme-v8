@@ -1,0 +1,52 @@
+{# see `archive.twig` for an alternative strategy of extending templates #}
+{% extends "base.twig" %}
+
+{% block content %}
+	{# see `base.twig:27` for where this block's content will be inserted #}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post_type }}" id="post-{{ post.ID }}">
+			<section class="section-archive">
+
+				{% include "/templates/partials/page-header.twig" %}
+
+				<div class="container">
+					<div class="row">
+						<div class="col-12 py-2 my-2">
+							<h1>Search :<b>
+									{{ s }}</b>
+							</h1>
+							<h3>{{ the_excerpt }}</h3>
+							{{ content }}
+						</div>
+					</div>
+				</div>
+				<div class="container bg-light">
+					<div class="row">
+						<div class="col-12 col-md-6 py-2 my-2 ">
+							{% include 'searchform.twig' %}
+						</div>
+						<div class="col-12 col-md-6 py-2 my-2 text-md-right">
+							<p class="m-0">Vista dei risultati da
+								<b>{{ startpost }}</b>
+								a
+								<b>{{ endpost }}</b>
+								di
+								<b>{{ found_posts }}</b>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row">
+						{% for post in posts %}
+							{% include ['tease.twig'] %}
+						{% endfor %}
+						{% include 'partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+
+					</div>
+				</div>
+			</section>
+		</article>
+	</div>
+{% endblock %}

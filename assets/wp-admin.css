@@ -1,0 +1,107 @@
+/*
+ * Custom css Admin Area Wordpress wp-admin.css
+ * Version: 1.0.0
+ * Author: Giorgio Rizza
+ * Author URL: https://www.astratto.agency/
+ * License: Made available under a MIT
+ * http://www.opensource.org/licenses/mit-license.php
+ * Desription: custom ccs admin area wordpress
+*/
+.wp-admin #wpcontent {
+    background: #CCCCFA;
+}
+
+#wpwrap {
+    background-color: #CCCCFA;
+}
+
+.php-error #adminmenuback, .php-error #adminmenuwrap {
+    margin-top: 0em;
+}
+
+#wpadminbar {
+    color: #f0f0f1;
+    background: #0000E5;
+}
+
+#wpadminbar .ab-empty-item, #wpadminbar a.ab-item, #wpadminbar > #wp-toolbar span.ab-label, #wpadminbar > #wp-toolbar span.noticon {
+    color: #f0f0f1;
+}
+
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item {
+    padding: 0 7px;
+    background-image: url('../img/icona-a5tratto-w.png') !important;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+    content: " ";
+    top: 2px;
+}
+
+
+/*
+
+
+a {
+    color: #49c5b6
+}
+#wpadminbar .ab-empty-item, #wpadminbar a.ab-item, #wpadminbar>#wp-toolbar span.ab-label, #wpadminbar>#wp-toolbar span.noticon {
+    color: #49c5b6;
+}
+
+#wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
+    color: #49c5b6;
+}
+
+#wpadminbar .ab-top-menu>li.hover>.ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus, #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+!*    background: #32373c;*!
+    color: #49c5b6;
+}
+
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover>a, #wpadminbar .quicklinks .menupop ul li a:focus, #wpadminbar .quicklinks .menupop ul li a:focus strong, #wpadminbar .quicklinks .menupop ul li a:hover, #wpadminbar .quicklinks .menupop ul li a:hover strong, #wpadminbar .quicklinks .menupop.hover ul li a:focus, #wpadminbar .quicklinks .menupop.hover ul li a:hover, #wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:focus, #wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:hover, #wpadminbar li #adminbarsearch.adminbar-focused:before, #wpadminbar li .ab-item:focus .ab-icon:before, #wpadminbar li .ab-item:focus:before, #wpadminbar li a:focus .ab-icon:before, #wpadminbar li.hover .ab-icon:before, #wpadminbar li.hover .ab-item:before, #wpadminbar li:hover #adminbarsearch:before, #wpadminbar li:hover .ab-icon:before, #wpadminbar li:hover .ab-item:before, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
+    color: #49c5b6;
+}
+#wpadminbar:not(.mobile)>#wp-toolbar a:focus span.ab-label, #wpadminbar:not(.mobile)>#wp-toolbar li:hover span.ab-label, #wpadminbar>#wp-toolbar li.hover span.ab-label {
+    color:  #49c5b6;
+}
+
+#wpadminbar, #wpadminbar:hover #wpadminbar .yoast-logo.svg {
+    color:  #49c5b6;
+}
+#wpadminbar .yoast-logo.svg {
+    color:  #49c5b6;
+}
+
+
+.my-logo div {
+    width: 32px;
+    height: 32px;
+    background-image: url( 'https://www.astratto.agency/wp-content/themes/a5tratto/img/logo350foot.png' ) no-repeat;
+}
+
+*/
+
+/*
+
+#adminmenu, #adminmenuwrap {
+    background-color: #333333;
+}
+#adminmenu a {
+    color: #49c5b6;
+}
+#adminmenu .wp-menu-arrow {
+    background: #efefef;
+    color: #333333;
+}
+#adminmenu div.wp-menu-image:before {
+    color: #49c5b6;
+}
+
+#adminmenu .wp-submenu a:focus, #adminmenu .wp-submenu a:hover, #adminmenu a:hover, #adminmenu li.menu-top>a:focus {
+    color: #49c5b6;
+}
+*/
