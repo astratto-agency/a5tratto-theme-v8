@@ -201,7 +201,7 @@ function a5t_scripts()
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
     foreach ($GLOBALS['A5T_SETTING_JS'] as $nome => $percorso) {
-        wp_enqueue_script($nome, $percorso);
+        wp_enqueue_script($nome, $percorso, NULL, NULL, true);
     }
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
