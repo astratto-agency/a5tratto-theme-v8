@@ -20,23 +20,27 @@ $(function () {
 });
 
 $(document).ready(function () {
-    /* setting link disable and set timout at link fot transition loader */
+    /* imposta il link a disabilitato e imposta il timeout sulla transizione dell'indicatore di caricamento */
     $('a').click(function () {
-        if (($(this).is(':not([href^="tel:"]):not([href^="mailto:"])'))) {
-            if (!$(this).hasClass("item-img-gallery")) {
-                if (!$(this).is('[data-lightbox-gallery]')) {
-
-                    $('body').removeClass('loaded');
-
-                    setTimeout(function (url) {
-                        window.location = url
-                    }, 1000, this.href);
-                }
-            }
+      /* verifica se il link contiene lo stesso dominio */
+      if ($(this).prop('hostname') === window.location.hostname) {
+        /* verifica se il link è un ancoraggio */
+        if ($(this).attr('href').indexOf('#') === 0) {
+          return; // non fare nulla e interrompi l'esecuzione
         }
+        /* verifica se il link ha come target "_blank" */
+        if ($(this).attr('target') === '_blank') {
+          return; // non fare nulla e interrompi l'esecuzione
+        }
+  
+        $('body').removeClass('loaded');
+  
+        setTimeout(function (url) {
+          window.location = url
+        }, 1000, this.href);
+      }
     });
-});
-
+  });
 
 /* :::::::::::::: 02 * A_SETTINGS animate */
 $(document).ready(function () {
