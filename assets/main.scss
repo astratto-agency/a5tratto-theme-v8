@@ -416,7 +416,7 @@ li {
   z-index: 1;
   transition: 0.4s all ease-out 0.5s;
   background-color: $white;
-  z-index: 1;
+  z-index: 2;
   .logo {
     max-height: 10px;
   }
@@ -436,7 +436,7 @@ button.navbar-toggler:focus-visible {
 }
 
 .header-menu {
-  z-index: 2;
+  z-index: 3;
   position: relative;
   background-color:  $white;
 } 
