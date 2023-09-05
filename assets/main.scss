@@ -250,7 +250,7 @@ footer {
 ::::::::::::::      Note: Impostazioni per css
 ::::::::::::::::::*/
 p {
-
+  font-family: $font-primary;
 }
 
 h1, .h1,
@@ -403,18 +403,23 @@ li {
 :::::::::::::: 11 * A_SETTINGS sticky-menu
 ::::::::::::::      Note: Impostazioni per css
 ::::::::::::::::::*/
-header .sticky-fix {
+ 
+
+
+.sticky-fix {
+  &.sticky-in {
+    top: 0;
+  }
   position: fixed;
   width: 100%;
   top: -126px;
   z-index: 1;
   transition: 0.4s all ease-out 0.5s;
-  background: $white;
-}
-
-header .sticky-in {
-  top: 0;
-  background: $white;
+  background-color: $white;
+  z-index: 1;
+  .logo {
+    max-height: 10px;
+  }
 }
 
 /*::::::::::::::::::::::::::::
@@ -430,92 +435,135 @@ button.navbar-toggler:focus-visible {
   outline: none;
 }
 
-#header-1 #primary-menu,
-#header-2 #primary-menu {
-  li {
-    list-style: none;
+.header-menu {
+  z-index: 2;
+  position: relative;
+  background-color:  $white;
+} 
+#header-1,
+#header-2 {
 
-    a {
-      text-decoration: none;
-      position: relative;
-      color: $primary;
-      font-size: 14px;
-      font-weight: 700;
-      font-family: $font-secondary;
-      display: block;
-      overflow: hidden;
-      transition: 0.7s all ease-in-out;
-      padding: 10px 14px;
+
+  .logo {
+    max-height: 20px;
+  }
+
+  #header-2-sidenav .logo {
+    max-height: 20px;
+  }
+
+  @media (min-width: 576px) {
+    #header-2-sidenav .logo {
+      max-height: 25px;
+    }
+
+    .logo {
+      max-height: 25px;
     }
   }
 
-  li:hover a {
-    color: $tertiary;
+
+  #primary-menu {
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        position: relative;
+        color: $primary;
+        font-size: 17px;
+        font-weight: 700;
+        font-family: $font-primary;
+        ;
+        display: block;
+        overflow: hidden;
+        transition: 0.7s all ease-in-out;
+        text-transform: uppercase;
+        padding: 10px 14px;
+      }
+    }
+
+    li:hover a {
+      color: $secondary;
+    }
+
+    li a:before {
+      content: '';
+      width: 0%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 2px;
+      background: $black;
+      position: absolute;
+      transition: 0.7s all ease-in-out;
+    }
+
+    .item-menu-icon a:before {
+      display: none;
+    }
+
+    li:hover>a:before {
+      content: '';
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 2px;
+      background: $secondary;
+      ;
+      position: absolute;
+      transition: 0.7s all ease-in-out;
+    }
+
+    li.current_page_item>a:before {
+      content: '';
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      height: 2px;
+      background: $primary;
+      position: absolute;
+      transition: 0.7s all ease-in-out;
+    }
+
+    li.current_page_item>a {
+      color: $tertiary;
+      transition: 0.7s all ease-in-out;
+    }
+
+    .dropdown:hover>.dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-toggle:hover:after {
+      display: inline-block;
+    }
   }
 
-  li a:before {
-    content: '';
-    width: 20%;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-    height: 2px;
-    background: $primary;
-    position: absolute;
-    transition: 0.7s all ease-in-out;
-  }
-
-  li:hover > a:before {
-    content: '';
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-    height: 2px;
-    background: $tertiary;
-    position: absolute;
-    transition: 0.7s all ease-in-out;
-  }
-
-  li.current_page_item > a:before {
-    content: '';
-    width: 50%;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-    height: 2px;
-    background: $quaternary;
-    position: absolute;
-    transition: 0.7s all ease-in-out;
-  }
-
-  li.current_page_item > a {
-    color: $quaternary;
-    transition: 0.7s all ease-in-out;
-  }
-
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-toggle:hover:after {
-    display: inline-block;
-  }
 }
 
-#header-2 .nav-mobile#primary-menu {
-  li {
-    display: block !important;
-    text-align: center;
+#header-2 {
 
-    a {
-      font-size: 20px;
-      text-transform: uppercase;
+  .nav-mobile#primary-menu {
+    li {
+      display: block !important;
+      text-align: center;
+
+      a {
+        font-size: 20px;
+        text-transform: uppercase;
+      }
     }
-  }
 
-  .dropdown-menu {
-    background-color: transparent;
+    .dropdown-menu {
+      background-color: transparent;
+    }
+
+
   }
 }
 
@@ -536,6 +584,59 @@ button.navbar-toggler:focus-visible {
   margin-top: 30px;
 }
 
+
+.full-menu-logo {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+/*::::::::::::::::::::::::::::
+:::::::::::::: 21 * A_SETTINGS sidenav
+::::::::::::::      Note: Impostazioni per css
+::::::::::::::::::*/
+.sidenav.sidenav-open .inner-sidenav,
+.sidenav.sidenav-open .overlay-content {
+  opacity: 1;
+  transition-delay: 0.0s;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.sidenav.sidenav-close .inner-sidenav,
+.sidenav.sidenav-close .overlay-content {
+  opacity: 0;
+  transition-delay: 0.5s;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: $secondary;
+  overflow-x: hidden;
+  transition: 0.5s;
+  /*padding-top: 60px;*/
+  text-align: center;
+}
+
+/*::::::::::::::::::::::::::::
+:::::::::::::: 22 * A_SETTINGS menu mobile
+::::::::::::::      Note: Impostazioni per css
+::::::::::::::::::*/
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
 
 .full-menu-logo {
   position: absolute;
@@ -610,7 +711,7 @@ button.navbar-toggler:focus-visible {
 ::::::::::::::      Note: Impostazioni per css
 ::::::::::::::::::*/
 .btn {
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 0.545em 1em;
   text-align: center;
   display: inline-block;
@@ -644,50 +745,71 @@ button.navbar-toggler:focus-visible {
   }
 }
 
-@mixin btn-color($bg) {
-  color: $white;
+@mixin btn-color($color, $bg, $border, $h-color, $h-bg, $h-border) {
+  color: $color;
   background: $bg;
-  border-color: $bg;
+  border-color: $border;
   transition: all 0.3s ease;
+  
   &:hover {
-    color: lighten($bg, 20%);
-    background: darken($bg, 10%);
-    border-color: darken($bg, 10%);
+    color: $h-color;
+    background: $h-bg;
+    border-color: $h-border;
   }
+  
   &:active {
-    background: darken($bg, 30%);
-    border-color: darken($bg, 30%);
+    background: darken($h-color, 30%);
+    border-color: darken($h-border, 30%);
   }
+  
   &:not(:disabled):not(.disabled).active,
   &:not(:disabled):not(.disabled):active,
   .show > &.dropdown-toggle {
     background: darken($bg, 30%);
-    border-color: darken($bg, 30%);
+    border-color: darken($border, 30%);
   }
+  
   &.disabled, &:disabled {
     opacity: 0.10;
     background: darken($bg, 30%);
-    border-color: darken($bg, 30%);
+    border-color: darken($border, 30%);
   }
+  
   &.focus, &:focus {
     box-shadow: 0 0 0 0.2rem lighten($bg, 10%);
   }
 }
 
 .btn-primary {
-  @include btn-color($primary);
+  @include btn-color($white, $primary, $primary, $white, $secondary, $secondary);
 }
 
 .btn-secondary {
-  @include btn-color($secondary);
+  @include btn-color($primary, $secondary, $secondary, $white, $primary, $primary);
 }
 
 .btn-tertiary {
-  @include btn-color($tertiary);
+  @include btn-color($white, $tertiary, $tertiary, $white, $quaternary, $quaternary);
 }
 
 .btn-quaternary {
-  @include btn-color($quaternary);
+  @include btn-color($white, $quaternary, $quaternary, $white, $tertiary, $tertiary);
+}
+
+.btn-outline-primary {
+  @include btn-color($primary, $white, $primary, $secondary, $white, $secondary);
+}
+
+.btn-outline-secondary {
+  @include btn-color($secondary, $white, $secondary, $primary, $white, $primary);
+}
+ 
+.btn-outline-tertiary {
+  @include btn-color($tertiary, $white, $tertiary, $quaternary, $white, $quaternary);
+}
+
+.btn-outline-quaternary {
+  @include btn-color($quaternary, $white, $quaternary, $tertiary, $white, $tertiary);
 }
 
 /*::::::::::::::::::::::::::::
@@ -1219,56 +1341,9 @@ header {
   border-radius: 50%;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 21 * A_SETTINGS sidenav
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
-.sidenav.sidenav-open .container {
-  opacity: 1;
-  transition-delay: 0.0s;
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
-}
 
-.sidenav.sidenav-close .container {
-  opacity: 0;
-  transition-delay: 0.5s;
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
-}
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  right: 0;
-  background-color: $secondary;
-  overflow-x: hidden;
-  transition: 0.5s;
-  /*padding-top: 60px;*/
-  text-align: center;
-}
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 22 * A_SETTINGS menu mobile
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.full-menu-logo {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-}
 
 /*::::::::::::::::::::::::::::
 :::::::::::::: 23 * A_SETTINGS equal cols

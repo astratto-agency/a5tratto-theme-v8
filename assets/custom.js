@@ -51,28 +51,57 @@ $(document).ready(function () {
     }
 });
 
-/* :::::::::::::: 03 * A_SETTINGS sticky */
-$(function () {
-    //caches a jQuery object containing the header element
-    var header = $(".sticky");
-    var lastScrollTop = 0;
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        var scrolltop = $(this).scrollTop();
-        if (scrolltop > lastScrollTop) {
-            // downscroll code
-            if (scroll >= 500) {
-                header.removeClass('sticky').addClass("sticky-in");
-            } else {
-                header.removeClass("sticky-in").addClass('sticky');
-            }
-        } else {
-            header.removeClass("sticky-in").addClass('sticky');
-        }
-        lastScrollTop = scrolltop;
+ /* :::::::::::::: 06 * A_SETTINGS menu showing  */
+$(document).ready(function () {
+    $(".menu-icon").on("click", function () {
+        $("nav ul").toggleClass("showing");
+        // alert('showing menu-icon');
     });
 });
 
+
+
+
+
+function openNav(elementId) {
+    var element = document.getElementById(elementId);
+    if (element) {
+        element.classList.add("sidenav-open");
+        element.classList.remove("sidenav-close");
+        setTimeout(function () {
+            element.style.width = "100%";
+        }, 20);
+    }
+}
+
+function closeNav(elementId) {
+    var element = document.getElementById(elementId);
+    if (element) {
+        element.classList.add("sidenav-close");
+        element.classList.remove("sidenav-open");
+        setTimeout(function () {
+            element.style.width = "0";
+        }, 500);
+    }
+}
+ 
+
+/* :::::::::::::: 03 * A_SETTINGS sticky */
+$(function () {
+    // Caches a jQuery object containing the header element
+    var header = $(".sticky");
+    var lastScrollTop = 0;
+
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 500) {
+            header.removeClass('sticky').addClass("sticky-in");
+        } else {
+            header.removeClass("sticky-in").addClass('sticky');
+        }
+    });
+});
 
 /* :::::::::::::: 04 * A_SETTINGS magicMouse */
 var magicmouse_active = document.getElementById("magic-mouse-js");
@@ -120,13 +149,7 @@ $(document).ready(function () {
 });
 
 
-/* :::::::::::::: 06 * A_SETTINGS menu showing  */
-$(document).ready(function () {
-    $(".menu-icon").on("click", function () {
-        $("nav ul").toggleClass("showing");
-        // alert('showing menu-icon');
-    });
-});
+
 
 
 /* :::::::::::::: 07 * A_SETTINGS jarallax-js  */
