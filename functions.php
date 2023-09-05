@@ -198,16 +198,20 @@ class StarterSite extends Timber\Site {
 		// Attiva Google Fonts per ogni riga fonts.google.com
 		*/
 		
-		/*    $a5t_setting_google_fonts = get_theme_mod("a5t_setting_google_fonts");
+		$a5t_setting_google_fonts = get_theme_mod("a5t_setting_google_fonts");
 		$google_fonts = explode("\n", $a5t_setting_google_fonts);
-		$google_fonts = array_filter($google_fonts, 'trim'); // remove any extra \r characters left behind
-		
-		
-		
-		Sgoogle_fonts[] rows = textArea.getText().split("\n");
-		$a5t_setting_google_fonts
-		$context['a5t_setting_google_fonts'] =
-		*/
+		$google_fonts = array_map('trim', $google_fonts); // remove any extra spaces from each element
+		$google_fonts = array_filter($google_fonts); // remove any empty elements
+		$context['setting_google_fonts'] = $google_fonts;
+		$fontNames = array();
+		foreach ($google_fonts as $link) {
+		    preg_match('/family=([^:]+)/i', $link, $matches);
+		    if (isset($matches[1])) {
+		        $fontNames[] = $matches[1];
+		    }
+		}
+		$context['setting_google_font_names'] = $fontNames;
+
 		
 		// * A_SETTINGS Setting
 		$context['setting_intestazione'] = get_theme_mod('a5t_setting_intestazione');

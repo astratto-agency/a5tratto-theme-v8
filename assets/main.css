@@ -205,7 +205,7 @@ footer {
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 h4, .h4,
@@ -371,7 +371,7 @@ button.navbar-toggler:focus-visible {
   color: #0000E5;
   font-size: 14px;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Kanit", sans-serif;
   display: block;
   overflow: hidden;
   transition: 0.7s all ease-in-out;
