@@ -10,6 +10,7 @@
                     <div class="col-12 py-2 my-2">
                         <h1>Category <b>{{ title }}</b></h1>
                         {{ term.description }}
+                        {{content}} 
                     </div>
                 </div>
             </div>
@@ -25,7 +26,7 @@
                                             <b>{{ parent.name }}</b>
                                         </a><br> 
                                         Descrizione {{ parent.description }}<br>
-                                        Field parent: {{ function('get_field', 'field_name', parent) }}
+                                        Field parent: {{ function('get_field', 'prova', parent) }} --  
                                     </li>
                                 {% endfor %}
                             </ul>

@@ -21,8 +21,25 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::context();
-
+$context = Timber::context(); 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
-Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+$templates        = array( 'page.twig', 'index.twig' );
+
+//  A_SETTINGS Assegno tutte le variabili di ACF a Twig
+$fields = get_field_objects(get_queried_object_id($timber_post));
+if ($fields):
+    foreach ($fields as $field):
+        $name_id = $field['name'];
+        $value_id = $field['value'];
+        $context[$name_id] = $value_id;
+    endforeach;
+endif;
+
+if ( is_front_page() ) {  
+    array_unshift( $templates, 'home.twig' );
+} else {
+    array_unshift( $templates, 'page-' . $timber_post->post_name . '.twig', 'page.twig' ); 
+}
+
+Timber::render( $templates, $context );

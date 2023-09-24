@@ -4,18 +4,21 @@
 {% extends "index.twig" %}
 
 {% block content %}
+
 	<div class="content-wrapper">
-		<article class="post-type-{{ post_type }}" id="post-{{ post.ID }}">
+		<article class="post-type-{{ post_type.name }}" id="post-{{ post.ID }}">
 			<section class="section-archive">
 				{% include "/templates/partials/page-header.twig" %}
 				<div class="container">
 					<div class="row">
 						<div class="col-12 py-2 my-2">
-							<h1>{{ post_type_name }}
-								<b>{{ title }}</b>
+							<h1>{{ post_type.name }}
+								<b>{{ post.post_title }} {{title}}</b>
 							</h1>
-							<h3>{{ the_excerpt }}</h3>
-							{{ content }}
+							<h3>{{ post.post_excerpt }}</h3>
+							{{ content }}  
+							{{prova}}
+							{{ term.description }}
 						</div>
 					</div>
 				</div>
