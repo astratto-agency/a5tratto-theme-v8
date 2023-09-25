@@ -125,6 +125,28 @@ function a5t_scripts()
     }
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta GSAP
+                        // Attiva libreria GSAP https://github.com/greensock/GSAP
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    if ($GLOBALS['assets_options']['A5T_SETTING_GSAP']) {
+        wp_enqueue_script('gsap-core', get_template_directory_uri() . '/assets/gsap/gsap.min.js', array(), '1.0.0', true);
+        wp_enqueue_script('gsap-cssruleplugin', get_template_directory_uri() . '/assets/gsap/CSSRulePlugin.min.js', array(), '1.0.0', true);
+        wp_enqueue_script('gsap-scrolltrigger', get_template_directory_uri() . '/assets/gsap/ScrollTrigger.min.js', array(), '1.0.0', true);
+        wp_enqueue_script('gsap-splitext', get_template_directory_uri() . '/assets/gsap/splitext.js', array(), '1.0.0', true);
+        //wp_enqueue_script('gsap-gsdevtools', get_template_directory_uri() . '/assets/gsap/gsdevtools.js', array(), '1.0.0', true);    
+    }
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Swiper
+                        // Attiva libreria Swiper 10.2 https://swiperjs.com/get-started
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    if ($GLOBALS['assets_options']['A5T_SETTING_SWIPER']) {
+        wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/swiper-bundle.min.js', array(), '1.0.0', true);
+    }
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Owl Carousel CSS JS
                         // Attiva libreria Owl Carousel CSS JS owlcarousel2.github.io/OwlCarousel2
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/

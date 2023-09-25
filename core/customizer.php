@@ -111,6 +111,37 @@ function a5t_customize_register($wp_customize)
     ));
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta GSAP
+                        // Attiva libreria GSAP https://github.com/greensock/GSAP
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    $wp_customize->add_setting('a5t_setting_gsap', array(
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('a5t_setting_gsap', array(
+        'type' => 'checkbox',
+        'section' => 'a5t_framework_general_settings',
+        'label' => __('GSAP'),
+        'description' => __('Attiva libreria GSAP https://github.com/greensock/GSAP'),
+    ));
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Swiper
+                        // Attiva libreria Swiper 10.2 https://swiperjs.com/get-started
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    $wp_customize->add_setting('a5t_setting_swiper', array(
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('a5t_setting_swiper', array(
+        'type' => 'checkbox',
+        'section' => 'a5t_framework_general_settings',
+        'label' => __('Swiper'),
+        'description' => __('Attiva libreria Swiper 10.2 https://swiperjs.com/get-started'),
+    ));
+
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     ::::::::::::::    * A_SETTINGS owl_carousel CSS
                         // Attiva libreria Owl Carousel CSS JS owlcarousel2.github.io/OwlCarousel2
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/

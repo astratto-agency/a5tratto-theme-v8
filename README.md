@@ -1,6 +1,6 @@
 <h1>A5tratto-Theme</h1>
 <h1>BETA</h1>
-<h2>V.8.0.0.4</h2>
+<h2>V.8.0.0.5</h2>
 <h3>m</h3>
 
 <p>Numero Versione</p>

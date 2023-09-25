@@ -25,6 +25,12 @@ $GLOBALS['assets_options'] = array(
     // Attiva libreria Hover CSS ianlunn.github.io/Hover
     'A5T_SETTING_HOVER' => get_theme_mod('a5t_setting_hover'),
 
+    // Attiva libreria GSAP https://github.com/greensock/GSAP
+    'A5T_SETTING_GSAP' => get_theme_mod('a5t_setting_gsap'),
+
+    // Attiva libreria Swiper 10.2 https://swiperjs.com/get-started
+    'A5T_SETTING_SWIPER' => get_theme_mod('a5t_setting_swiper'),
+
     // Attiva libreria Owl Carousel CSS JS owlcarousel2.github.io/OwlCarousel2
     'A5T_SETTING_OWL_CAROUSEL' => get_theme_mod('a5t_setting_owl_carousel'),
 
