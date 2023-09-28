@@ -42,6 +42,7 @@ $args = array(
     'post_type' => get_post_type(''), // Nome del custom post
     'orderby' => 'date',
     'order' => 'ASC',
+	'post__not_in' => array( get_the_ID() ) // Escludi il post corrente
 );
 $context['archive_posts'] = $archive_posts = new Timber\PostQuery($args);
 	
