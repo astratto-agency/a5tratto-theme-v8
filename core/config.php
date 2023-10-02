@@ -25,6 +25,18 @@ $GLOBALS['assets_options'] = array(
     // Attiva libreria Hover CSS ianlunn.github.io/Hover
     'A5T_SETTING_HOVER' => get_theme_mod('a5t_setting_hover'),
 
+    // Attiva libreria Three js threejs.org
+    'A5T_SETTING_THREE' => get_theme_mod('a5t_setting_three'),
+
+    // Attiva libreria Masonry js https://masonry.desandro.com
+    'A5T_SETTING_MASONRY' => get_theme_mod('a5t_setting_masonry'),
+
+    // Attiva libreria Images Loaded js https://imagesloaded.desandro.com/
+    'A5T_SETTING_IMAGESLOADED' => get_theme_mod('a5t_setting_imagesloaded'),
+
+    // Attiva libreria Fitty js https://rikschennink.github.io/fitty/
+    'A5T_SETTING_FITTY' => get_theme_mod('a5t_setting_fitty'),
+
     // Attiva libreria GSAP https://github.com/greensock/GSAP
     'A5T_SETTING_GSAP' => get_theme_mod('a5t_setting_gsap'),
 

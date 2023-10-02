@@ -126,6 +126,68 @@ function a5t_customize_register($wp_customize)
     ));
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Three.js
+                        // Attiva libreria Three threejs.org
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    $wp_customize->add_setting('a5t_setting_three', array(
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('a5t_setting_three', array(
+        'type' => 'checkbox',
+        'section' => 'a5t_framework_general_settings',
+        'label' => __('Three js'),
+        'description' => __('Attiva libreria Three js threejs.org'),
+    ));
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Fitty.js
+                        // Attiva libreria Fitty js https://rikschennink.github.io/fitty/
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    $wp_customize->add_setting('a5t_setting_fitty', array(
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('a5t_setting_fitty', array(
+        'type' => 'checkbox',
+        'section' => 'a5t_framework_general_settings',
+        'label' => __('Fitty js'),
+        'description' => __('Attiva libreria Fitty js https://rikschennink.github.io/fitty/'),
+    ));
+
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta masonry.js
+                        // Attiva libreria Mesonry js https://masonry.desandro.com
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    $wp_customize->add_setting('a5t_setting_masonry', array(
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('a5t_setting_masonry', array(
+        'type' => 'checkbox',
+        'section' => 'a5t_framework_general_settings',
+        'label' => __('Masonry js'),
+        'description' => __('Attiva libreria Mesonry.js https://masonry.desandro.com'),
+    ));
+
+        
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Imagesloaded.js
+                        // Attiva libreria Images Loaded js https://imagesloaded.desandro.com
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    $wp_customize->add_setting('a5t_setting_imagesloaded', array(
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('a5t_setting_imagesloaded', array(
+        'type' => 'checkbox',
+        'section' => 'a5t_framework_general_settings',
+        'label' => __('Images Loaded js'),
+        'description' => __('Attiva libreria Images Loaded js https://imagesloaded.desandro.com/'),
+    ));
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Swiper
                         // Attiva libreria Swiper 10.2 https://swiperjs.com/get-started
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -138,7 +200,7 @@ function a5t_customize_register($wp_customize)
         'section' => 'a5t_framework_general_settings',
         'label' => __('Swiper'),
         'description' => __('Attiva libreria Swiper 10.2 https://swiperjs.com/get-started'),
-    ));
+    )); 
 
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

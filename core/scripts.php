@@ -137,13 +137,49 @@ function a5t_scripts()
         //wp_enqueue_script('gsap-gsdevtools', get_template_directory_uri() . '/assets/gsap/gsdevtools.js', array(), '1.0.0', true);    
     }
 
+        /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Three.js
+                            // Attiva libreria Three js threejs.org  
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    if ($GLOBALS['assets_options']['A5T_SETTING_THREE']) {
+        wp_enqueue_script('three', get_template_directory_uri() . '/assets/three/three.min.js', array(), '1.0.0', true);
+    }
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Fitty
+                            // Attiva libreria Fitty js https://rikschennink.github.io/fitty/ 
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    if ($GLOBALS['assets_options']['A5T_SETTING_FITTY']) {
+        wp_enqueue_script('fitty', get_template_directory_uri() . '/assets/fitty/fitty.min.js', array(), '1.0.0', true);
+    }
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Images Loaded 
+                            // Attiva libreria Images Loaded js https://imagesloaded.desandro.com/
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    if ($GLOBALS['assets_options']['A5T_SETTING_IMAGESLOADED']) {
+        wp_enqueue_script('imagesloaded', get_template_directory_uri() . '/assets/imagesloaded/imagesloaded.pkgd.min', array(), '1.0.0', true);
+    }
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Masonry
+                            // Attiva libreria Masonry js https://masonry.desandro.com 
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    if ($GLOBALS['assets_options']['A5T_SETTING_MASONRY']) {
+        wp_enqueue_script('masonry', get_template_directory_uri() . '/assets/masonry/masonry.js', array(), '1.0.0', true);
+    }
+ 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     ::::::::::::::    * A_SETTINGS Attiva in base alla scalta Swiper
                         // Attiva libreria Swiper 10.2 https://swiperjs.com/get-started
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
     if ($GLOBALS['assets_options']['A5T_SETTING_SWIPER']) {
-        wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/swiper-bundle.min.js', array(), '1.0.0', true);
+        wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/swiper/swiper-bundle.min.js', array(), '1.0.0', true);
     }
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
