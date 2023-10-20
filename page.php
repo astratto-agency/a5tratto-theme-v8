@@ -36,6 +36,18 @@ if ($fields):
     endforeach;
 endif;
 
+
+
+ //  A_SETTINGS Main query
+ $args = array(
+    'post_type' => 'post', 
+    'paged' => 2,
+    'orderby' => 'date',
+    'order' => 'ASC',
+);
+$context['posts'] = $posts = new Timber\PostQuery($args); 
+ 
+
 if ( is_front_page() ) {  
     array_unshift( $templates, 'home.twig' );
 } else {

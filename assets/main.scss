@@ -1,78 +1,46 @@
-/*::::::::::::::::::::::::::::
-::::::::::::::    * A_SETTINGS INDEX CSS
-::::::::::::::      Note:
-:::::::::::::: 01 * A_SETTINGS Import
-::::::::::::::      Note: Impostazioni per css per M portal
-:::::::::::::: 02 * A_SETTINGS Font
-::::::::::::::      Note: Impostazioni font
-:::::::::::::: 03 * A_SETTINGS Color
-::::::::::::::      Note: Impostazioni colori
-:::::::::::::: 04 * A_SETTINGS Background Color
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 05 * A_SETTINGS Text Color
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 06 * A_SETTINGS Main Section
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 07 * A_SETTINGS font
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 08 * A_SETTINGS img-hover
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 09 * A_SETTINGS jarallax
-::::::::::::::      Note: Impostazioni per css jarallax-keep-img
-:::::::::::::: 10 * A_SETTINGS animate
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 11 * A_SETTINGS sticky-menu
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 12 * A_SETTINGS primary-menu
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 13 * A_SETTINGS shadow
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 14 * A_SETTINGS radius
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 15 * A_SETTINGS button a5t
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 16 * A_SETTINGS button
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 17 * A_SETTINGS cf7
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 18 * A_SETTINGS cf7
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 19 * A_SETTINGS loader
-::::::::::::::      Note: impostazioni per modificare il loader
-:::::::::::::: 20 * A_SETTINGS gototop
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 21 * A_SETTINGS sidenav
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 22 * A_SETTINGS menu mobile
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 23 * A_SETTINGS equal cols
-::::::::::::::      Note: Impostazioni per css
-:::::::::::::: 24 * A_SETTINGS magic-mouse-js
-::::::::::::::      Note: Impostazioni per togliere il cursore definitivamente
-:::::::::::::: 25 * A_SETTINGS progress-js
-::::::::::::::      Note: Impostazioni per togliere il cursore definitivamente
-:::::::::::::: 26 * A_SETTINGS breakpoints
-::::::::::::::      Note: Impostazioni per togliere il cursore definitivamente
-::::::::::::::::::*/
+/* A_SETTINGS INDEX CSS 
+01 * A_SETTINGS Import
+02 * A_SETTINGS Font
+03 * A_SETTINGS Color
+04 * A_SETTINGS Background Color
+05 * A_SETTINGS Text Color
+06 * A_SETTINGS Main Section
+07 * A_SETTINGS font
+08 * A_SETTINGS img-hover
+09 * A_SETTINGS jarallax
+10 * A_SETTINGS animate
+11 * A_SETTINGS sticky-menu
+12 * A_SETTINGS primary-menu
+13 * A_SETTINGS shadow
+14 * A_SETTINGS radius
+15 * A_SETTINGS button a5t
+16 * A_SETTINGS button
+17 * A_SETTINGS cf7
+18 * A_SETTINGS cf7
+19 * A_SETTINGS loader
+20 * A_SETTINGS gototop
+21 * A_SETTINGS sidenav
+22 * A_SETTINGS menu mobile
+23 * A_SETTINGS equal cols
+24 * A_SETTINGS magic-mouse-js
+25 * A_SETTINGS progress-js
+26 * A_SETTINGS breakpoints
+*/
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 01 * A_SETTINGS Import
-::::::::::::::      Note: Impostazioni per css 
-::::::::::::::::::*/
-// @import url("style-custom.css");
+/*  01 * A_SETTINGS Import
+    Note: Impostazioni per css @import url("style-custom.css");
+*/
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 02 * A_SETTINGS Font
-::::::::::::::      Note: Impostazioni font
-::::::::::::::::::*/
+/*  02 * A_SETTINGS Font
+    Note: Impostazioni font
+*/
 @import url("font/roboto/stylesheet.css");
-
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Kanit', sans-serif;
-/*::::::::::::::::::::::::::::
-:::::::::::::: 03 * A_SETTINGS Color
-::::::::::::::      Note: Impostazioni colori
-::::::::::::::::::*/
+
+/*  03 * A_SETTINGS Color
+    Note: Impostazioni colori
+*/
 $primary: #0000E5;
 $primary-rgb: rgb(0, 0, 255);
 $primary-rgba: rgba(0, 0, 255, 1);
@@ -99,65 +67,31 @@ $black-5: #F2F2F2;
 $black-5-rgb: rgb(242, 242, 242);
 $black-5-rgba: rgba(0, 0, 0, 0.05);
 
+
+
 :root {
-  --a5t-primary: #0000E5;
-  --a5t-secondary: #FFFF33;
-  --a5t-tertiary: #8080F2;
-  --a5t-quaternary: #CCCCFA;
-  --a5t-primary-rgb: 0, 0, 255;
-  --a5t-secondary-rgb: 255, 255, 51;
-  --a5t-primary-rgba: 0, 0, 255, 1;
-  --a5t-secondary-rgab: 255, 255, 51, 1;
-  --red-salsa: #f94144ff;
-  --orange-red: #f3722cff;
-  --yellow-orange-color-wheel: #f8961eff;
-  --mango-tango: #f9844aff;
-  --maize-crayola: #f9c74fff;
-  --pistachio: #90be6dff;
-  --zomp: #43aa8bff;
-  --cadet-blue: #4d908eff;
-  --queen-blue: #577590ff;
-  --cg-blue: #277da1ff;
+  --primary: #0000E5;
+  --secondary: #FFFF33;
+  --tertiary: #8080F2;
+  --quaternary: #CCCCFA;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 04 * A_SETTINGS Background Color
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
-@mixin bg-custom($bg) {
-  background: $bg !important;
-}
+$colors: (
+  primary: #0000E5,
+  secondary: #FFFF33,
+  tertiary: #8080F2,
+  quaternary: #CCCCFA,
+  white: #ffffff,
+  black: #000000,
+);
 
-.bg-primary {
-  @include bg-custom($primary);
-}
-
-.bg-secondary {
-  @include bg-custom($secondary);
-}
-
-.bg-tertiary {
-  @include bg-custom($tertiary);
-}
-
-.bg-quaternary {
-  @include bg-custom($quaternary);
-}
-
-.bg-black {
-  @include bg-custom($black);
-}
-
-.bg-black-50 {
-  @include bg-custom($black-50);
-}
-
-.bg-black-20 {
-  @include bg-custom($black-20);
-}
-
-.bg-black-5 {
-  @include bg-custom($black-5);
+/*  04 * A_SETTINGS Background Color
+    Note: Impostazioni per css
+*/
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background:$value;
+  }
 }
 
 .bg-primary-half-white {
@@ -167,38 +101,18 @@ $black-5-rgba: rgba(0, 0, 0, 0.05);
   background: linear-gradient(0deg, $primary 50%, $white 50%);
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 05 * A_SETTINGS Text Color
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
-@mixin color-custom($color) {
-  color: $color;
+/*  05 * A_SETTINGS Text Color
+    Note: Impostazioni per css
+*/
+@each $name, $value in $colors {
+  .color-#{$name} {
+    color:$value;
+  }
 }
 
-.color-primary {
-  @include color-custom($primary);
-}
-
-.color-secondary {
-  @include color-custom($secondary);
-}
-
-.color-tertiary {
-  @include color-custom($tertiary);
-}
-
-.color-quaternary {
-  @include color-custom($quaternary);
-}
-
-.color-black {
-  @include color-custom($black);
-}
-
-/*::::::::::::::::::::::::::::
-:::::::::::::: 06 * A_SETTINGS Main Section
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  06 * A_SETTINGS Main Section
+    Note: Impostazioni per css
+*/
 body {
   font-family: $font-primary;
   color: $black;
@@ -206,12 +120,13 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
+ 
 }
 
-header {
-}
+header {}
 
 footer {
+  background: $black;
   position: relative;
   width: 100%;
 }
@@ -245,23 +160,28 @@ footer {
   }
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 07 * A_SETTINGS font
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  07 * A_SETTINGS font
+    Note: Impostazioni per css
+*/
 p {
   font-family: $font-primary;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
   font-family: $font-secondary;
 }
 
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: $font-primary;
 }
 
@@ -286,9 +206,7 @@ a:hover {
 
 
 .bg-secondary {
-  a:hover {
-
-  }
+  a:hover {}
 }
 
 .a5t-underline {
@@ -299,16 +217,13 @@ a:hover {
   text-decoration-color: $primary;
 }
 
-ul {
-}
+ul {}
 
-li {
-}
+li {}
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 08 * A_SETTINGS img-hover
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  08 * A_SETTINGS img-hover
+    Note: Impostazioni per css
+*/
 .img-hover .img-hover-inner {
   position: relative;
   overflow: hidden;
@@ -323,16 +238,15 @@ li {
   transform: scale(1.1);
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 09 * A_SETTINGS jarallax
-::::::::::::::      Note: Impostazioni per css jarallax-keep-img
-::::::::::::::::::*/
+/*  09 * A_SETTINGS jarallax
+    Note: Impostazioni per css jarallax-keep-img
+*/
 .jarallax-keep-img {
   position: relative;
   z-index: 0;
 }
 
-.jarallax-keep-img > .jarallax-img {
+.jarallax-keep-img>.jarallax-img {
   position: relative;
   display: block;
   max-width: 100%;
@@ -376,36 +290,29 @@ li {
   opacity: 1;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 10 * A_SETTINGS animate
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  10 * A_SETTINGS animate
+    Note: Impostazioni per css
+*/
 /* This only changes this particular animation duration */
 .animate__animated.animate__bounce {
   --animate-duration: 2s;
 }
 
-/* This changes all the animations globally */
+/* This changes all the animations global */
 :root {
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
 }
-
 .hidden {
   opacity: 0;
 }
-
 .visible {
   opacity: 1;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 11 * A_SETTINGS sticky-menu
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
- 
-
-
+/*  11 * A_SETTINGS sticky-menu
+    Note: Impostazioni per css
+*/
 .sticky-fix {
   &.sticky-in {
     top: 0;
@@ -417,15 +324,15 @@ li {
   transition: 0.4s all ease-out 0.5s;
   background-color: $white;
   z-index: 2;
+
   .logo {
     max-height: 10px;
   }
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 12 * A_SETTINGS primary-menu
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  12 * A_SETTINGS primary-menu
+    Note: Impostazioni per css
+*/
 .navbar-toggler {
   color: $primary;
 }
@@ -438,35 +345,28 @@ button.navbar-toggler:focus-visible {
 .header-menu {
   z-index: 3;
   position: relative;
-  background-color:  $white;
-} 
+  background-color: $white;
+}
+
 #header-1,
 #header-2 {
-
-
   .logo {
     max-height: 20px;
   }
-
   #header-2-sidenav .logo {
     max-height: 20px;
   }
-
   @media (min-width: 576px) {
     #header-2-sidenav .logo {
       max-height: 25px;
     }
-
     .logo {
       max-height: 25px;
     }
   }
-
-
   #primary-menu {
     li {
       list-style: none;
-
       a {
         text-decoration: none;
         position: relative;
@@ -482,11 +382,9 @@ button.navbar-toggler:focus-visible {
         padding: 10px 14px;
       }
     }
-
     li:hover a {
       color: $secondary;
     }
-
     li a:before {
       content: '';
       width: 0%;
@@ -499,11 +397,9 @@ button.navbar-toggler:focus-visible {
       position: absolute;
       transition: 0.7s all ease-in-out;
     }
-
     .item-menu-icon a:before {
       display: none;
     }
-
     li:hover>a:before {
       content: '';
       width: 100%;
@@ -517,7 +413,6 @@ button.navbar-toggler:focus-visible {
       position: absolute;
       transition: 0.7s all ease-in-out;
     }
-
     li.current_page_item>a:before {
       content: '';
       width: 100%;
@@ -529,52 +424,37 @@ button.navbar-toggler:focus-visible {
       position: absolute;
       transition: 0.7s all ease-in-out;
     }
-
     li.current_page_item>a {
       color: $tertiary;
       transition: 0.7s all ease-in-out;
     }
-
     .dropdown:hover>.dropdown-menu {
       display: block;
     }
-
     .dropdown-toggle:hover:after {
       display: inline-block;
     }
   }
-
 }
-
 #header-2 {
-
   .nav-mobile#primary-menu {
     li {
       display: block !important;
       text-align: center;
-
       a {
         font-size: 20px;
         text-transform: uppercase;
       }
     }
-
     .dropdown-menu {
       background-color: transparent;
     }
-
-
   }
 }
 
-
-
-
-
-/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:::::::::::::: 11 * A_SETTINGS menu mobile
-::::::::::::::      Impostazioni per css
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*  11 * A_SETTINGS menu mobile
+    Note: Impostazioni per css
+*/
 
 .overlay-content {
   position: relative;
@@ -584,7 +464,6 @@ button.navbar-toggler:focus-visible {
   margin-top: 30px;
 }
 
-
 .full-menu-logo {
   position: absolute;
   margin: 0 auto;
@@ -592,10 +471,9 @@ button.navbar-toggler:focus-visible {
   right: 0;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 21 * A_SETTINGS sidenav
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  21 * A_SETTINGS sidenav
+    Note: Impostazioni per css
+*/
 .sidenav.sidenav-open .inner-sidenav,
 .sidenav.sidenav-open .overlay-content {
   opacity: 1;
@@ -626,10 +504,9 @@ button.navbar-toggler:focus-visible {
   text-align: center;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 22 * A_SETTINGS menu mobile
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  22 * A_SETTINGS menu mobile
+    Note: Impostazioni per css
+*/
 .overlay-content {
   position: relative;
   top: 25%;
@@ -645,18 +522,16 @@ button.navbar-toggler:focus-visible {
   right: 0;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 13 * A_SETTINGS shadow
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  13 * A_SETTINGS shadow
+    Note: Impostazioni per css
+*/
 .a5t-shadow-1 {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 14 * A_SETTINGS radius
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  14 * A_SETTINGS radius
+    Note: Impostazioni per css
+*/
 .a5t-radius-10 {
   border-radius: 10px;
 }
@@ -669,14 +544,13 @@ button.navbar-toggler:focus-visible {
   border-radius: 10px 10px 0 0;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 15 * A_SETTINGS button a5t
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  15 * A_SETTINGS button a5t
+    Note: Impostazioni per css
+*/
 .a5t-btn {
   font-size: 19px;
   background: none;
-  color: $primary-rgb;
+  color: $primary;
   border: none;
   margin: 4px auto;
   transition: all 0.7s;
@@ -686,7 +560,7 @@ button.navbar-toggler:focus-visible {
   color: $white;
 }*/
 .a5t-btn:hover {
-  color: rgba(var(secondary-rgb));
+  color: $secondary;
   text-decoration: none;
 }
 
@@ -696,20 +570,19 @@ button.navbar-toggler:focus-visible {
   width: 30px;
   margin-top: 28px;
   height: 2px;
-  background: $secondary-rgb;
+  background: $secondary;
   position: absolute;
   transition: 0.7s all ease-in-out;
 }
 
 .a5t-btn:hover::before {
   width: 80px;
-  background: $primary-rgb;
+  background: $primary;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 16 * A_SETTINGS button
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  16 * A_SETTINGS button
+    Note: Impostazioni per css
+*/
 .btn {
   border-radius: 0px;
   padding: 0.545em 1em;
@@ -722,7 +595,9 @@ button.navbar-toggler:focus-visible {
   line-height: 1;
   position: relative;
   font-weight: 600;
-  text-transform: uppercase; /*Standard*/
+  text-transform: uppercase;
+
+  /*Standard*/
   /*
   border-radius: 10px;
   font-family: Inter;
@@ -734,7 +609,7 @@ button.navbar-toggler:focus-visible {
   text-transform: uppercase;
   padding: 0.375rem 1.75rem;
   transition: all 0.3s ease-in-out;
-  */
+*/
   .btn-circle {
     width: 40px;
     height: 40px;
@@ -750,32 +625,34 @@ button.navbar-toggler:focus-visible {
   background: $bg;
   border-color: $border;
   transition: all 0.3s ease;
-  
+
   &:hover {
     color: $h-color;
     background: $h-bg;
     border-color: $h-border;
   }
-  
+
   &:active {
     background: darken($h-color, 30%);
     border-color: darken($h-border, 30%);
   }
-  
+
   &:not(:disabled):not(.disabled).active,
   &:not(:disabled):not(.disabled):active,
-  .show > &.dropdown-toggle {
+  .show>&.dropdown-toggle {
     background: darken($bg, 30%);
     border-color: darken($border, 30%);
   }
-  
-  &.disabled, &:disabled {
+
+  &.disabled,
+  &:disabled {
     opacity: 0.10;
     background: darken($bg, 30%);
     border-color: darken($border, 30%);
   }
-  
-  &.focus, &:focus {
+
+  &.focus,
+  &:focus {
     box-shadow: 0 0 0 0.2rem lighten($bg, 10%);
   }
 }
@@ -803,7 +680,7 @@ button.navbar-toggler:focus-visible {
 .btn-outline-secondary {
   @include btn-color($secondary, $white, $secondary, $primary, $white, $primary);
 }
- 
+
 .btn-outline-tertiary {
   @include btn-color($tertiary, $white, $tertiary, $quaternary, $white, $quaternary);
 }
@@ -812,13 +689,12 @@ button.navbar-toggler:focus-visible {
   @include btn-color($quaternary, $white, $quaternary, $tertiary, $white, $tertiary);
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 17 * A_SETTINGS cf7
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*//*::::::::::::::::::::::::::::
-:::::::::::::: 18 * A_SETTINGS cf7
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  17 * A_SETTINGS cf7
+    Note: Impostazioni per css
+*/
+/*  18 * A_SETTINGS cf7
+    Note: Impostazioni per css
+*/
 #contact-form-style-1 {
   label {
     display: block;
@@ -927,17 +803,25 @@ button.navbar-toggler:focus-visible {
     box-shadow: 0 0 0 0.2rem rgba($black-20-rgb, 0.5) !important;
   }
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+
+*/
     color: $black-50;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox
+*/
   }
 
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11
+*/
     color: $black-50;
     opacity: 1;
   }
 
-  ::-ms-input-placeholder { /* Microsoft Edge */
+  ::-ms-input-placeholder {
+    /* Microsoft Edge
+*/
     color: $black-50;
     opacity: 1;
   }
@@ -1028,7 +912,7 @@ button.navbar-toggler:focus-visible {
     color: $primary;
     border-bottom: 3px solid $primary;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(var(--a5t-secondary-rgb), 0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5) !important;
   }
 
   .wpcf7-select:focus,
@@ -1042,7 +926,7 @@ button.navbar-toggler:focus-visible {
   .wpcf7-file:hover,
   input[type="file"]:focus {
     border: none;
-    box-shadow: 0 0 0 0.2rem rgba(var(--a5t-secondary-rgb), 0);
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5) !important;
   }
 
   .wpcf7-list-item {
@@ -1070,20 +954,28 @@ button.navbar-toggler:focus-visible {
     color: $primary;
     border-bottom: 3px solid $primary;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(var(--a5t-secondary-rgb), 0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5) !important;
   }
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+
+*/
     color: $primary;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox
+*/
   }
 
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11
+*/
     color: $primary;
     opacity: 1;
   }
 
-  ::-ms-input-placeholder { /* Microsoft Edge */
+  ::-ms-input-placeholder {
+    /* Microsoft Edge
+*/
     color: $primary;
     opacity: 1;
   }
@@ -1110,12 +1002,11 @@ button.navbar-toggler:focus-visible {
   }
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 19 * A_SETTINGS loader
-::::::::::::::      Note: impostazioni per modificare il loader
-::::::::::::::      Note: effetto al caricamento della pagina composto da logo sezioni e loader
-::::::::::::::      Note: L'evento che fa avviare è la classe 'loaded' posizionato nel body
-::::::::::::::::::*/
+/*  19 * A_SETTINGS loader
+    Note: impostazioni per modificare il loader
+    Note: effetto al caricamento della pagina composto da logo sezioni e loader
+    Note: L'evento che fa avviare è la classe 'loaded' posizionato nel body
+*/
 #main-content {
   filter: blur(13px);
   -webkit-filter: blur(13px);
@@ -1155,7 +1046,7 @@ header {
   z-index: 80;
 }
 
-/* loader medium */
+/* loader mediu*/
 #loader {
   display: block;
   position: relative;
@@ -1171,7 +1062,7 @@ header {
   animation: spin 2s linear infinite;
 }
 
-/* loader small */
+/* loader smal*/
 #loader:before {
   content: "";
   position: absolute;
@@ -1185,7 +1076,7 @@ header {
   animation: spin 3s linear infinite;
 }
 
-/* loader big */
+/* loader bi*/
 #loader:after {
   content: "";
   position: absolute;
@@ -1199,7 +1090,7 @@ header {
   animation: spin 1.5s linear infinite;
 }
 
-/* loader logo */
+/* loader log*/
 .logo-loader {
   transition: all 0.3s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 82;
@@ -1214,20 +1105,19 @@ header {
   height: 100px;
 }
 
-/* loader sections */
+/* loader section*/
 #loader-wrapper .loader-section {
   position: fixed;
   top: 0;
   width: 50%;
   height: 100%;
   background: $primary;
-  /*background: rgba(var(--a5t-primary-rgb), 0.4);*/
   z-index: 80;
   transform: translateX(0);
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/* loader sections directions */
+/* loader sections direction*/
 #loader-wrapper .loader-section.section-left {
   left: 0;
   opacity: 1;
@@ -1246,6 +1136,7 @@ header {
     -ms-transform: rotate(-0deg);
     -o-transform: rotate(-0deg);
   }
+
   100% {
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
@@ -1255,7 +1146,7 @@ header {
   }
 }
 
-/* loader loaded effect exit */
+/* loader loaded effect exi*/
 .loaded #loader-wrapper .loader-section.section-left {
   transform: translateX(-100%);
   opacity: 0;
@@ -1307,8 +1198,7 @@ header {
   z-index: 82;
 }
 
-.inner-loader-background {
-}
+.inner-loader-background {}
 
 .loaded .section-header {
   opacity: 1;
@@ -1320,10 +1210,9 @@ header {
   margin-top: unset;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 20 * A_SETTINGS gototop
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  20 * A_SETTINGS gototop
+    Note: Impostazioni per css
+*/
 #gototop-btn {
   display: none;
   position: fixed;
@@ -1345,10 +1234,9 @@ header {
 
 
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 23 * A_SETTINGS equal cols
-::::::::::::::      Note: Impostazioni per css
-::::::::::::::::::*/
+/*  23 * A_SETTINGS equal cols
+    Note: Impostazioni per css
+*/
 .row.equal-cols {
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -1363,7 +1251,7 @@ header {
   display: block;
 }
 
-.row.equal-cols > [class*='col-'] {
+.row.equal-cols>[class*='col-'] {
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -1372,7 +1260,7 @@ header {
   flex-direction: column;
 }
 
-.row.equal-cols > [class*='col-'] > * {
+.row.equal-cols>[class*='col-']>* {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1387,10 +1275,9 @@ header {
   flex-direction: column;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 24 * A_SETTINGS magic-mouse-js
-::::::::::::::      Note: Impostazioni per togliere il cursore definitivamente
-::::::::::::::::::*/
+/*  24 * A_SETTINGS magic-mouse-js
+    Note: Impostazioni per togliere il cursore definitivamente
+*/
 body #magicMouseCursor {
   position: fixed;
   width: 35px;
@@ -1457,10 +1344,9 @@ body .magic-hover:hover {
   cursor: none;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 25 * A_SETTINGS progress-js
-::::::::::::::      Note: Impostazioni per togliere il cursore definitivamente
-::::::::::::::::::*/
+/*  25 * A_SETTINGS progress-js
+    Note: Impostazioni per togliere il cursore definitivamente
+*/
 #nprogress .bar {
   background: $secondary;
 }
@@ -1474,34 +1360,27 @@ body .magic-hover:hover {
   border-left-color: $secondary;
 }
 
-/*::::::::::::::::::::::::::::
-:::::::::::::: 26 * A_SETTINGS breakpoints
-::::::::::::::      Note: Impostazioni per togliere il cursore definitivamente
-::::::::::::::      Note:Bootstrap 4 breakpoints
-::::::::::::::      Note:Extra small devices (portrait phones, less than 576px)
-::::::::::::::      Note:No media query since this is the default in Bootstrap because it is "mobile first"
-::::::::::::::::::*/
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
+/*  26 * A_SETTINGS breakpoints
+    Note: Impostazioni per togliere il cursore definitivamente
+Note:Bootstrap 4 breakpoints
+Note:Extra small devices (portrait phones, less than 576px)
+Note:No media query since this is the default in Bootstrap because it is "mobile first*/
+/* Small devices (landscape phones, 576px and up*/
+@media (min-width: 576px) {}
 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {
-}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoin*/
+@media (min-width: 768px) {}
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
+/* Large devices (desktops, 992px and up*/
+@media (min-width: 992px) {}
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+/* Extra large devices (large desktops, 1200px and up*/
+@media (min-width: 1200px) {}
 
-/* Custom media queries Set width to make card deck cards 100% width */
-@media (max-width: 950px) {
-}
+/* Custom media queries Set width to make card deck cards 100% widt*/
+@media (max-width: 950px) {}
 
-/* TODO readme paletta colori dedicata alle note todo */
+/* TODO readme paletta colori dedicata alle note tod*/
 /*
 f94144,f3722c,f8961e,f9844a,f9c74f,90be6d,43aa8b,4d908e,577590,277da1
 https://coolors.co/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
