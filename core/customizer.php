@@ -379,7 +379,7 @@ function a5t_customize_register($wp_customize)
     ));
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-    ::::::::::::::    * A_SETTINGS Google Mps Apy
+    ::::::::::::::    * A_SETTINGS Google Maps Api
                     Inserisci API key di Google Maps console.cloud.google.com
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
@@ -391,6 +391,21 @@ function a5t_customize_register($wp_customize)
         'section' => 'a5t_framework_tracking_settings',
         'label' => __('GMaps API KEY'),
         'description' => __('Inserisci API key di Google Maps console.cloud.google.com'),
+    ));
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::    * A_SETTINGS Google Recaptcha V3
+                    Inserisci API key di Google Recaptcha V3 console.cloud.google.com/security/recaptcha
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    $wp_customize->add_setting('a5t_setting_recaptcha', array(
+        'capability' => 'edit_theme_options',
+    ));
+    $wp_customize->add_control('a5t_setting_recaptcha', array(
+        'type' => 'text',
+        'section' => 'a5t_framework_tracking_settings',
+        'label' => __('Google Recaptcha V3 API KEY'),
+        'description' => __('Inserisci API key di Google Recaptcha V3 console.cloud.google.com/security/recaptcha'),
     ));
 
     /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

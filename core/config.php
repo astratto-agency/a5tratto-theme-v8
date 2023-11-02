@@ -64,6 +64,9 @@ $GLOBALS['assets_options'] = array(
     // Inserisci API key di Google Maps console.cloud.google.com
     'A5T_SETTING_MAPS' => get_theme_mod('a5t_setting_maps'),
 
+    // Inserisci API key di Google Recaptcha V3 console.cloud.google.com/security/recaptcha
+    'A5T_SETTING_RECAPTCHA' => get_theme_mod('a5t_setting_recaptcha'),
+
     // http://www.giovannifracasso.it/accettazione-cookies-privacy-banner/
     'A5T_SETTING_COOKIES' => get_theme_mod('a5t_setting_cookies'),
 

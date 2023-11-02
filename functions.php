@@ -248,6 +248,23 @@ class StarterSite extends Timber\Site {
 		// * A_SETTINGS Google Maps
 		$gmaps_api_key = get_theme_mod('a5t_setting_maps');
 		$context['google_maps_api'] = 'https://maps.googleapis.com/maps/api/js?key=' . $gmaps_api_key . '&amp;sensor=false&callback=initMap';
+
+		// * A_SETTINGS Google Recaptcha v3		
+		function add_recaptcha_lib() {
+			$recaptcha_api_key = get_theme_mod('a5t_setting_recaptcha');
+			if (!empty($recaptcha_api_key)) {
+				echo '<script src="https://www.google.com/recaptcha/api.js?render=' . $recaptcha_api_key . '" async defer></script>';
+			}
+		}
+		add_action('wp_head', 'add_recaptcha_lib');
+		
+		function add_recaptcha_init() {
+			$recaptcha_api_key = get_theme_mod('a5t_setting_recaptcha');
+			if (!empty($recaptcha_api_key)) {
+				echo '<script>function onLoadRecaptcha(){grecaptcha.ready(function(){grecaptcha.execute("' . $recaptcha_api_key . '",{action:"submit"}).then(function(token){document.getElementById("g-recaptcha-response").value=token;});});}</script>';
+			}
+		}
+		add_action('wp_footer', 'add_recaptcha_init');
 		
 		// * A_SETTINGS Yoast
 		if ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) {
