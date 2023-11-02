@@ -316,60 +316,57 @@ class StarterSite extends Timber\Site {
 				'gallery',
 				'caption',
 				)
-			);
+		);
 			
-			/*
+		/*
 			* Enable support for Post Formats.
 			*
 			* See: https://codex.wordpress.org/Post_Formats
 			*/
-			add_theme_support(
-				'post-formats',
-				array(
-					'aside',
-					'image',
-					'video',
-					'quote',
-					'link',
-					'gallery',
-					'audio',
-					)
-				);
-				
-				add_theme_support( 'menus' );
-			}
+		add_theme_support(
+			'post-formats',
+			array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+				'gallery',
+				'audio',
+				)
+			);
 			
-			/** This Would return 'foo bar!'.
-			*
-			* @param string $text being 'foo', then returned 'foo bar!'.
-			*/
-			public function myfoo( $text ) {
-				$text .= ' bar!';
-				return $text;
-			}
-			
-			/** This is where you can add your own functions to twig.
-			*
-			* @param string $twig get extension.
-			*/
-			public function add_to_twig( $twig ) {
-				$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
-				$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
-				return $twig;
-			}
-			
-			
-			
-			
-		}
+		add_theme_support( 'menus' );
+	}
 		
-		function theme_add_woocommerce_support() {
-			add_theme_support( 'woocommerce' );
-		}
+	/** This Would return 'foo bar!'.
+	*
+	* @param string $text being 'foo', then returned 'foo bar!'.
+	*/
+	public function myfoo( $text ) {
+		$text .= ' bar!';
+		return $text;
+	}
+	
+	/** This is where you can add your own functions to twig.
+	*
+	* @param string $twig get extension.
+	*/
+	public function add_to_twig( $twig ) {
+		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
+		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
+		return $twig;
+	}
+ 
+}
 		
-		add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
-		
-		new StarterSite();
+function theme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
+
+new StarterSite();
 
 // * A_SETTINGS Allow excertp in page
 add_post_type_support('page', 'excerpt');
@@ -404,43 +401,42 @@ add_filter('request', function ($request) {
     return $request;
 });
 
-// * A_SETTINGS Create post form CF7
-/*
-function save_posted_data($posted_data)
-{
-    $form_id = WPCF7_ContactForm::get_current();
-    if ($form_id->id == 'ID_FORM') {
-        $args = array(
-            'post_type' => 'richieste',
-            'post_taxonomy' => 'in-attesa',
-            'post_title' => $posted_data['referentenome'],
-            'post_content' => $posted_data['note'],
-            'post_status' => 'private',
-            'post_author' => $posted_data['userid'],
-        );
-        $post_id = wp_insert_post($args);
-        if (!is_wp_error($post_id)) {
-            $my_post = array(
-                'ID' => $post_id,
-                'post_slug' => $post_id,
-                'post_title' => $posted_data['nomeviaggio'] . " - " . $posted_data['idviaggio'] . " - Rif. " . $posted_data['primoospitenome'] . " " . $posted_data['primoospitecognome']
-            );
-            wp_update_post($my_post);
-            wp_set_object_terms($post_id, 'in-attesa', 'stati');
-            wp_set_post_tags($post_id, $posted_data['concessionariatag']);
-            if (isset($posted_data['concessionaria'])) {
-                update_post_meta($post_id, 'concessionaria_nome', $posted_data['concessionaria']);
-            }
-            return $posted_data;
-        }
-    }
-}
-
-add_filter('wpcf7_posted_data', 'save_posted_data');
-*/
-
-
-function getRefererPage( $form_tag )
+// * A_SETTINGS CF7
+// Create post form CF7
+// function save_posted_data($posted_data)
+// {
+//     $form_id = WPCF7_ContactForm::get_current();
+//     if ($form_id->id == 'ID_FORM') {
+//         $args = array(
+//             'post_type' => 'richieste',
+//             'post_taxonomy' => 'in-attesa',
+//             'post_title' => $posted_data['referentenome'],
+//             'post_content' => $posted_data['note'],
+//             'post_status' => 'private',
+//             'post_author' => $posted_data['userid'],
+//         );
+//         $post_id = wp_insert_post($args);
+//         if (!is_wp_error($post_id)) {
+//             $my_post = array(
+//                 'ID' => $post_id,
+//                 'post_slug' => $post_id,
+//                 'post_title' => $posted_data['nomeviaggio'] . " - " . $posted_data['idviaggio'] . " - Rif. " . $posted_data['primoospitenome'] . " " . $posted_data['primoospitecognome']
+//             );
+//             wp_update_post($my_post);
+//             wp_set_object_terms($post_id, 'in-attesa', 'stati');
+//             wp_set_post_tags($post_id, $posted_data['concessionariatag']);
+//             if (isset($posted_data['concessionaria'])) {
+//                 update_post_meta($post_id, 'concessionaria_nome', $posted_data['concessionaria']);
+//             }
+//             return $posted_data;
+//         }
+//     }
+// }
+// 
+// add_filter('wpcf7_posted_data', 'save_posted_data');
+ 
+// Add tag referer-page with url of previous page
+function getRefererPageForm( $form_tag )
 {
 	if ( $form_tag['name'] == 'referer-page' ) {
 		$form_tag['values'][] = htmlspecialchars($_SERVER['HTTP_REFERER']);
@@ -448,6 +444,22 @@ function getRefererPage( $form_tag )
 	return $form_tag;
 }
 if ( !is_admin() ) {
-	add_filter( 'wpcf7_form_tag', 'getRefererPage' );
+	add_filter( 'wpcf7_form_tag', 'getRefererPageForm' );
 }
 
+// Add tag current-page with url of current page
+function getCurrentPageForm($form_tag)
+{
+    global $wp;
+    $current_url = home_url(add_query_arg(array(), $wp->request));
+
+    if ($form_tag['name'] == 'current-page') {
+        $form_tag['values'][] = htmlspecialchars($current_url);
+    }
+
+    return $form_tag;
+}
+
+if (!is_admin()) {
+    add_filter('wpcf7_form_tag', 'getCurrentPageForm');
+}
