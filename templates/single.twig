@@ -1,5 +1,11 @@
 {% extends "base.twig" %}
 {% block content %}
+
+{% set article = content %}
+{% set reading_speed = 200 %}
+{% set word_count = article|split(' ')|length %}
+{% set reading_time = (word_count / reading_speed)|round(0, 'ceil') %}
+
     <article class="single single-type-{{ post.post_type }}" id="post-{{ post.ID }}">
         <section class="section-single">
             <div class="container">
