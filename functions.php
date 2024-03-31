@@ -258,13 +258,7 @@ class StarterSite extends Timber\Site {
 		}
 		add_action('wp_head', 'add_recaptcha_lib');
 		
-		function add_recaptcha_init() {
-			$recaptcha_api_key = get_theme_mod('a5t_setting_recaptcha');
-			if (!empty($recaptcha_api_key)) {
-				echo '<script>function onLoadRecaptcha(){grecaptcha.ready(function(){grecaptcha.execute("' . $recaptcha_api_key . '",{action:"submit"}).then(function(token){document.getElementById("g-recaptcha-response").value=token;});});}</script>';
-			}
-		}
-		add_action('wp_footer', 'add_recaptcha_init');
+		
 		
 		// * A_SETTINGS Yoast
 		if ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) {
@@ -463,3 +457,13 @@ function getCurrentPageForm($form_tag)
 if (!is_admin()) {
     add_filter('wpcf7_form_tag', 'getCurrentPageForm');
 }
+
+
+// This code adds additional MIME types for JSON and SVG files. 
+function cc_mime_types($mimes)
+{
+	$mimes['json'] = 'application/json';
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

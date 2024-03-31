@@ -356,6 +356,24 @@ if ($GLOBALS['assets_options']['A5T_SETTING_COOKIES']) {
     add_action('wp_footer', 'a5t_cookies', 20);
 }
 
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::    * A_SETTINGS Google Recaptcha
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+if (get_theme_mod('a5t_setting_recaptcha') != '') {  
+    ?>
+    <script> 
+        grecaptcha.ready(function() {
+            grecaptcha.execute("<?php echo get_theme_mod('a5t_setting_recaptcha'); ?>", { action: "submit" }).then(function(token) {
+                document.getElementById("g-recaptcha-response").value = token;
+                console.log("reCAPTCHA:", token);
+            });
+        });
+    </script> 
+    <?php
+}
+ 
+
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::    * A_SETTINGS Google Analytics script
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
