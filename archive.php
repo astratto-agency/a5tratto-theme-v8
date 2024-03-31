@@ -21,7 +21,8 @@ Template Name: Template Archive
 
 $templates = array('archive.twig', 'index.twig');
 $context = Timber::context(); 
-$context['post_type'] = $post_type_obj = get_post_type_object(get_post_type());
+$post_type_obj = get_post_type_object(get_post_type()); 
+$context['post_type'] = $post_type_obj->name;
 $context['term'] = $term = new Timber\Term(get_queried_object_id()); 
 // A_SETTINGS Assignment of the pagination number of posts per page
 $paginazione = get_option('posts_per_page');
@@ -94,9 +95,10 @@ if (is_day()) {
     // A_SETTINGS Check of posts page with same slug of current cpt slug
     if ($query->have_posts()) {
         $query->the_post();
-        $context['post'] = $post = get_post(get_the_ID());
+        $context['post'] = $post = get_post(get_the_ID()); 
+        $page_id = get_the_ID();
         $context['title'] = get_the_title($page_id);
-        $context['content'] = get_the_content($page_id);
+        $context['content'] = get_the_content($page_id);  
         wp_reset_postdata();
     } else {
         $context['title'] = $post_type_obj->labels->singular_name;
@@ -107,9 +109,11 @@ if (is_day()) {
     // A_SETTINGS Page with setting tempalte archive   
 } elseif (is_home()) {
     // A_SETTINGS Page articles of post set in theme option of wp 
-    $page_id = get_option('page_for_posts');
+    $page_id = get_option('page_for_posts'); 
+    $context['post'] = $post = get_post($page_id);
     $context['title'] = get_the_title($page_id);
-    $context['content'] = get_post_field('post_content', $page_id);
+    $context['content'] = get_the_content($page_id);
+    $context['the_excerpt'] = get_the_excerpt($page_id); 
 } else {
     echo 'not set type of archive';
 } 
